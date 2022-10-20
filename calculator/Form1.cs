@@ -25,10 +25,18 @@ namespace Calculator
             if (a != string.Empty && b != string.Empty)
             {
                 a = calculation.ProcessStatement(unary, a + operation + b);
+                if (a[0] == '-')
+                {
+                    label1.Text = unary = "-";
+                    a = a.Substring(1);
+                }
+                else
+                {
+                    label1.Text = unary = string.Empty;
+                }
                 Display.Text = a;
                 operation = str;
                 b = string.Empty;
-               label1.Text= unary = string.Empty;
             }
             else
             {
