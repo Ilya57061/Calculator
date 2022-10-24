@@ -5,6 +5,7 @@ namespace Calculator.Tests
 {
     public class CalculationTests
     {
+        
         [Fact]
         public void TestProcessStatement()
         {
@@ -72,16 +73,37 @@ namespace Calculator.Tests
             Assert.Equal("0", result);
         }
         [Fact]
-        public void TestDivide()
+        public void TestDivideReturn2()
         {
             Calculation calculation = new();
             string result = calculation.ProcessStatement("", "2/1");
             Assert.Equal("2", result);
-            result = calculation.ProcessStatement("", "3/2");
+        }
+        [Fact]
+        public void TestDivideReturn1()
+        {
+            Calculation calculation = new();
+            string result = calculation.ProcessStatement("", "3/2");
             Assert.Equal("1", result);
-            result = calculation.ProcessStatement("", "2/f");
+        }
+        [Fact]
+        public void TestDivideReturn0()
+        {
+            Calculation calculation = new();
+            string result = calculation.ProcessStatement("", "2/f");
             Assert.Equal("0", result);
-            result = calculation.ProcessStatement("-", "10/2");
+        }
+        public void TestDivideReturnNot0()
+        {
+            Calculation calculation = new();
+            string result = calculation.ProcessStatement("", "2/0");
+            Assert.Equal("NOT ÷ 0", result);
+        }
+        [Fact]
+        public void TestDivide()
+        {
+            Calculation calculation = new();
+           string result = calculation.ProcessStatement("-", "10/2");
             Assert.Equal("-5", result);
             result = calculation.ProcessStatement("", "0/2");
             Assert.Equal("NOT ÷ 0", result);
