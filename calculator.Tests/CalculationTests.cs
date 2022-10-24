@@ -93,6 +93,7 @@ namespace Calculator.Tests
             string result = calculation.ProcessStatement("", "2/f");
             Assert.Equal("0", result);
         }
+        [Fact]
         public void TestDivideReturnNot0()
         {
             Calculation calculation = new();
