@@ -10,5 +10,20 @@
 </ul>
 
 <h1>Как приступить к работе</h1>
-
+Требования: 
+<ul>
+  <li>На вашем компьютере должна быть установлена Windows 10 или иная версия.</li>
+  <li>Установите последнюю версию Visual Studio (достаточно бесплатной версии сообщества).</li>
+  <ul>
+    <li>Установите рабочую нагрузку "Универсальная разработка платформы Windows".</li>
+    <li>Установите дополнительный компонент "Universal Windows Platform tools".</li>
+    <li>Установите последнюю версию пакета SDK для Windows 11.</li>
+    </ul>
+<p><img src="https://user-images.githubusercontent.com/81263807/197620083-3abc64b7-446b-4bfd-b4bc-7eac8c87f650.png"><p>
+   <li>Откройте Calculator.sln в Visual Studio для создания и запуска приложения Calculator.</li>
+  <li>Клонирование кода:</li>
+  <pre>
+<code>https://github.com/microsoft/calculator.git</code>
+</pre>
+</ul>
 <p><img src="https://user-images.githubusercontent.com/81263807/197603837-1905dc8b-4947-4310-8430-6f5274c54c74.png"></p>
